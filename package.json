@@ -1,8 +1,8 @@
 {
-  "name": "code150",
+  "name": "template-taro-ts",
   "version": "1.0.0",
   "private": true,
-  "description": "150 line code.",
+  "description": "Project template for Taro and TS.",
   "templateInfo": {
     "name": "default",
     "typescript": true,

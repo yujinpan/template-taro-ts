@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'code150',
+  projectName: 'template-taro-ts',
   date: '2020-3-28',
   designWidth: 750,
   deviceRatio: {

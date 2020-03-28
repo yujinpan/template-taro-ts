@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "code150",
-  "description": "150 line code.",
+  "projectname": "template-taro-ts",
+  "description": "Project template for Taro and TS.",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,
