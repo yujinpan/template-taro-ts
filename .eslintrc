@@ -1,12 +1,18 @@
 {
-  "extends": ["taro"],
+  "extends": ["taro", "plugin:prettier/recommended"],
   "rules": {
-    "space-before-function-paren": ["error", "never"],
-    "semi": ["error", "always"],
     "no-unused-vars": ["error", { "varsIgnorePattern": "Taro" }],
     "react/jsx-filename-extension": [
       1,
       { "extensions": [".js", ".jsx", ".tsx"] }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "arrowParens": "always",
+        "semi": true
+      }
     ]
   },
   "parser": "@typescript-eslint/parser",
