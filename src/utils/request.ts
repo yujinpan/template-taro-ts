@@ -8,7 +8,7 @@ import { localDataUser } from './local-data';
  *   - 处理 token
  *   - 处理错误
  */
-export async function request(options: Taro.request.Option) {
+export default async function request(options: Taro.request.Option) {
   // 处理 token
   const localData = localDataUser.get();
   if (options.data && localData && localData.token) {
