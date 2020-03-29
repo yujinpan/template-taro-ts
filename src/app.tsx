@@ -1,6 +1,7 @@
 import Taro, { Component } from '@tarojs/taro';
-import Index from './pages/index';
 
+import Index from './pages/index';
+import pages from './pages.json';
 import './app.scss';
 
 // 如果需要在 h5 环境中开启 React Devtools
@@ -26,13 +27,13 @@ class App extends Component {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Taro.Config = {
-    pages: ['pages/index/index'],
+    pages: Object.keys(pages),
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black',
-    },
+      navigationBarTextStyle: 'black'
+    }
   };
 
   // 在 App 类中的 render() 函数没有实际作用
