@@ -36,7 +36,15 @@ const config = {
   },
   plugins: [],
   defineConstants: {},
-  alias: require('../tsconfig').compilerOptions.paths,
+  alias: (function () {
+    // paths 为数组类型，取第一个
+    const result = {};
+    const paths = require('../tsconfig.json').compilerOptions.paths;
+    for (let key in paths) {
+      result[key.replace('/*', '')] = paths[key][0].replace('/*', '');
+    }
+    return result;
+  })(),
   mini: {
     postcss: {
       pxtransform: {

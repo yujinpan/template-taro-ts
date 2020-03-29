@@ -1,7 +1,7 @@
 import Taro, { Component } from '@tarojs/taro';
 
-import Index from './pages/index';
-import pages from './pages.json';
+import Index from '@/pages/index/index';
+
 import './app.scss';
 
 // 如果需要在 h5 环境中开启 React Devtools
@@ -27,7 +27,13 @@ class App extends Component {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Taro.Config = {
-    pages: Object.keys(pages),
+    // 动态 pages
+    // @link https://nervjs.github.io/taro/docs/envs.html#appjs-%E4%B8%AD%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84-pages
+    // @ts-ignore
+    // eslint-disable-next-line no-undef
+    pages: preval`
+      module.exports = Object.values(require('./pages.json'));
+    `,
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
