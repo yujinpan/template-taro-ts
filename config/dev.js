@@ -4,5 +4,9 @@ module.exports = {
   },
   defineConstants: {},
   mini: {},
-  h5: {}
+  h5: {
+    devServer: {
+      open: false
+    }
+  }
 };
