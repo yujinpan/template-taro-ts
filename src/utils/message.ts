@@ -1,10 +1,10 @@
-import Taro from "@tarojs/taro";
+import Taro from '@tarojs/taro';
 
 export function showToast(message: string) {
   // 延迟执行，防止被 hideLoading 关闭了
   setTimeout(() => {
     Taro.showToast({
-      icon: "none",
+      icon: 'none',
       title: message,
       duration: 2500
     });
@@ -13,7 +13,7 @@ export function showToast(message: string) {
 
 export function showLoading(message: string) {
   Taro.showLoading({
-    title: message || "加载中..."
+    title: message || '加载中...'
   });
 }
 

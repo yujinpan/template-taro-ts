@@ -4,7 +4,7 @@
  */
 export const CONFIG_APP = {
   appKey: 'test'
-}
+};
 
 /**
  * 服务地址配置
@@ -12,4 +12,4 @@ export const CONFIG_APP = {
  */
 export const CONFIG_SERVER = {
   base: 'http://test.com/api'
-}
+};

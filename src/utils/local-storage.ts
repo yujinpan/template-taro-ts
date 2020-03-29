@@ -12,7 +12,7 @@
  * userToken.get();
  */
 
-import Taro from "@tarojs/taro";
+import Taro from '@tarojs/taro';
 
 // polyfill
 const localStorage = {
@@ -32,7 +32,7 @@ const localStorage = {
 
 export class LocalDataManager {
   static _existNames: any[];
-  name = "";
+  name = '';
   constructor(name) {
     // 抛出重复的名称错误
     const existNames = LocalDataManager._existNames;

@@ -8,18 +8,18 @@ export function formatAPIList(res) {
     if (Array.isArray(res.data)) {
       return {
         total: res.data.length,
-        data: res.data,
+        data: res.data
       };
     } else {
       return {
         total: res.data.total,
-        data: res.data.records,
+        data: res.data.records
       };
     }
   } else {
     return {
       total: 0,
-      data: [],
+      data: []
     };
   }
 }
@@ -43,5 +43,5 @@ export function formatAPIDetail(res) {
  * @return {Boolean}
  */
 export function formatAPIHandle(res) {
-  return (res && res.code === 200);
+  return res && res.code === 200;
 }

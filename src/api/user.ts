@@ -1,5 +1,5 @@
-import request from "../utils/request";
-import { CONFIG_SERVER } from "../config";
+import request from '../utils/request';
+import { CONFIG_SERVER } from '../config';
 
 const url = {
   login: `${CONFIG_SERVER.base}/login`
@@ -11,7 +11,7 @@ const url = {
 export function login(username: string, password: string) {
   return request({
     url: `${url.login}`,
-    method: "POST",
+    method: 'POST',
     data: {
       username,
       password

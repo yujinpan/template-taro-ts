@@ -1,5 +1,5 @@
-import Taro from "@tarojs/taro";
-import { showToast } from "./message";
+import Taro from '@tarojs/taro';
+import { showToast } from './message';
 import { localDataUser } from './local-data';
 
 /**
@@ -20,7 +20,7 @@ export default async function request(options: Taro.request.Option) {
 
   // 处理错误
   if (res && res.data && res.data.code !== 200) {
-    showToast(res.data.message || "请求数据失败");
+    showToast(res.data.message || '请求数据失败');
   }
 
   return res.data;

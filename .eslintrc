@@ -6,12 +6,15 @@
       1,
       { "extensions": [".js", ".jsx", ".tsx"] }
     ],
+    "import/prefer-default-export": 0,
+    "import/no-commonjs": 0,
     "prettier/prettier": [
       "error",
       {
         "singleQuote": true,
         "arrowParens": "always",
-        "semi": true
+        "semi": true,
+        "trailingComma": "none"
       }
     ]
   },
