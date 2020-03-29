@@ -43,5 +43,5 @@ export function formatAPIDetail(res) {
  * @return {Boolean}
  */
 export function formatAPIHandle(res) {
-  return !!(res && res.code === 200);
+  return (res && res.code === 200);
 }

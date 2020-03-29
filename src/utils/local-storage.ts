@@ -12,7 +12,7 @@
  * userToken.get();
  */
 
-import Taro from '@tarojs/taro';
+import Taro from "@tarojs/taro";
 
 // polyfill
 const localStorage = {
@@ -27,11 +27,12 @@ const localStorage = {
   },
   clear() {
     Taro.clearStorageSync();
-  },
+  }
 };
 
 export class LocalDataManager {
-  name = '';
+  static _existNames: any[];
+  name = "";
   constructor(name) {
     // 抛出重复的名称错误
     const existNames = LocalDataManager._existNames;
@@ -79,7 +80,6 @@ export class LocalDataManager {
     clearLocalData(this.name);
   }
 }
-LocalDataManager._existNames = [];
 
 /**
  * 校验版本号
